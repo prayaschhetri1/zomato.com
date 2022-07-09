@@ -7,4 +7,7 @@ export const getData = (payload) => (dispatch) => {
     .then((res) => {
         dispatch({type:GET_DATA,payload:res.data})
     })
+    .catch((err) => {
+        console.log(err)
+    })
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import Home from "../Components/home/Home";
 import Navbar from "../Components/navbar/Navbar";
 import Cart from "../pages/cart/Cart";
 import Login from "../pages/login/Login";
@@ -11,7 +12,8 @@ const MainRoute = () => {
     <div>
         <Navbar/>
       <Routes>
-        <Route path="/" element={<ProductCart />} />
+        <Route path="/" element={<Home/>} />
+        <Route path="/product" element={<ProductCart />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/product/:id" element={<SingleItem />} />
         <Route path="/login" element={<Login />} />

@@ -1,0 +1,21 @@
+.main-div{
+    border-bottom: 1px solid black;
+    background-color: rgb(85, 18, 101);
+    position: relative;
+}
+
+
+.nav-div{
+    
+    display:flex;
+    width:95%;
+    padding: 15px 0px 15px 0px;
+    margin: auto;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.navStyle{
+    text-decoration: none;
+  
+}

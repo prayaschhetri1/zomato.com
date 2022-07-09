@@ -1,0 +1,20 @@
+.product_page {
+  display: grid;
+  width:90%;
+  margin:auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
+  grid-gap: 16px;
+}
+
+.main_single_item{
+    padding:4px 7px 4px 7px;
+
+}
+
+.main_single_item:hover{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.main_single_item > img{
+    border-radius: 7px;
+}
