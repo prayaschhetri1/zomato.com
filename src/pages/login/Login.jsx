@@ -9,9 +9,9 @@ import { AuthContext } from "../../context/AuthContext";
 
 const Login = () => {
   const { data, setIsAuth, isAuth } = useContext(AuthContext);
-  const location = useLocation()
-  const comingFrom = location.state?.from?.pathname || '/'
-  const navigate = useNavigate()
+  const location = useLocation();
+  const comingFrom = location.state?.from?.pathname || "/";
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     email: "",
@@ -29,15 +29,11 @@ const Login = () => {
       setIsAuth(true);
       alert("Yippy you have successfully logged in .. Enjoy your shopping😍");
       setIsLoggedIn(true);
-      navigate(comingFrom,{replace:true})
-       
-      
+      navigate(comingFrom, { replace: true });
     } else {
       setIsLoggedIn(false);
     }
   };
-
-  
 
   return (
     <div className="main_wrapper">
