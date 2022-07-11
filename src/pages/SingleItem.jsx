@@ -3,22 +3,16 @@ import { Button } from "@mui/material";
 
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
 import { getCartItem } from "../redux/appRedux/action";
 
-
 const SingleItem = ({ item }) => {
- 
-  const dispatch = useDispatch()
-  
-
+  const dispatch = useDispatch();
 
   const handleAddToCart = (item) => {
-      dispatch(getCartItem(item))
-  }
+    dispatch(getCartItem(item));
+  };
 
-
-  
   return (
     <>
       <div className="card main_single_item">

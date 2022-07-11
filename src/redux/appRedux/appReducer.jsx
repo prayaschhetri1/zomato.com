@@ -13,7 +13,7 @@ export const appReducer = (state = initialState, action) => {
       return {
         ...state,
         prod: payload,
-      };
+      }
     }
     case CART_ITEM : {
       console.log(state)

@@ -4,6 +4,7 @@ import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 
 const SingleCart = ({item}) => {
+  
   return (
     <div style={{width:"300px"}} className="card main_single_item">
         <img src={item.image} height="300" width="100%" className="card-img-top" alt="..." />

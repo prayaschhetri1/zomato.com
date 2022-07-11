@@ -6,6 +6,8 @@ import Cart from "../pages/cart/Cart";
 import Login from "../pages/login/Login";
 import ProductCart from "./../pages/ProductCart";
 import SingleItem from "./../pages/SingleItem";
+import SignUp from './../pages/signUp/SignUp';
+import RequireAuth from './../Components/HOC/RequireAuth';
 
 const MainRoute = () => {
   return (
@@ -14,9 +16,11 @@ const MainRoute = () => {
       <Routes>
         <Route path="/" element={<Home/>} />
         <Route path="/product" element={<ProductCart />} />
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<RequireAuth> <Cart /></RequireAuth>} />
         <Route path="/product/:id" element={<SingleItem />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+
       </Routes>
     </div>
   );

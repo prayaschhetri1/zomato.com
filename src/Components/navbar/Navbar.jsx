@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import StyledBadge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { AppContext } from './../../context/AppContext';
+import { AppContext } from '../../context/AuthContext';
 
 import { useSelector } from 'react-redux';
 const Navbar = () => {
