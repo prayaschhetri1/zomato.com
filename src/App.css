@@ -18,3 +18,25 @@
 .main_single_item > img{
     border-radius: 7px;
 }
+
+.check_boxes{
+  display:flex;
+  width:90%;
+  margin:auto;
+  gap:30px;
+  align-items: center;
+
+}
+.check_boxes > input{
+    font-size: 30px;
+}
+
+.check_boxes > label{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.checkCateg{
+    width:90%;
+    margin:auto;
+}

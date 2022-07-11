@@ -1,4 +1,12 @@
-import { Button, Drawer } from "@mui/material";
+import {
+  Button,
+  Drawer,
+  FormControl,
+  FormControlLabel,
+  FormLabel,
+  Radio,
+  RadioGroup,
+} from "@mui/material";
 import React from "react";
 
 const Filters = () => {
@@ -18,6 +26,7 @@ const Filters = () => {
         className="offcanvas offcanvas-start"
         data-bs-backdrop="static"
         tabIndex="-1"
+        style={{ width: "320px" }}
         id="staticBackdrop"
         aria-labelledby="staticBackdropLabel"
       >
@@ -33,7 +42,51 @@ const Filters = () => {
           ></button>
         </div>
         <div className="offcanvas-body">
-          <div>I will not close if you click outside of me.</div>
+          <div>
+            <div className="checkCateg">
+              <h5>Choose from Categories</h5>
+
+              <form action="">
+                <div className="check_boxes">
+                  <input type="checkbox" />
+                  <label htmlFor="">Jwellary</label>
+                </div>
+                <div className="check_boxes">
+                  <input type="checkbox" />
+                  <label htmlFor="">Shoes</label>
+                </div>
+                <div className="check_boxes">
+                  <input type="checkbox" />
+                  <label htmlFor="">Jackets</label>
+                </div>
+              </form>
+            </div>
+
+            <div className="checkCateg" style={{marginTop:"50px"}}>
+              <FormControl>
+                <FormLabel id="demo-row-radio-buttons-group-label">
+                  
+                </FormLabel>
+                <h5>Choose from Gender</h5>
+                <RadioGroup
+                  row
+                  aria-labelledby="demo-row-radio-buttons-group-label"
+                  name="row-radio-buttons-group"
+                >
+                  <FormControlLabel
+                    value="female"
+                    control={<Radio />}
+                    label="Female"
+                  />
+                  <FormControlLabel
+                    value="male"
+                    control={<Radio />}
+                    label="Male"
+                  />
+                </RadioGroup>
+              </FormControl>
+            </div>
+          </div>
         </div>
       </div>
     </div>

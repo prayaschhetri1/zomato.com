@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./Navbar.css";
-import { Link, NavLink } from "react-router-dom";
-import StyledBadge, { BadgeProps } from "@mui/material/Badge";
-import { styled } from "@mui/material/styles";
+import { NavLink } from "react-router-dom";
+import StyledBadge from "@mui/material/Badge";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import { AppContext } from './../../context/AppContext';
+
+import { useSelector } from 'react-redux';
 const Navbar = () => {
+  const cartItem = useSelector((state) => state.appReducer.cartItem)
   return (
     <div className="main-div">
       <div className="nav-div">
@@ -44,7 +47,7 @@ const Navbar = () => {
             })}
           >
             <IconButton aria-label="cart" style={{ color: "#fff" }}>
-              <StyledBadge badgeContent={1} color="success">
+              <StyledBadge badgeContent={cartItem && cartItem.length} color="success">
                 <ShoppingCartIcon />
               </StyledBadge>
             </IconButton>
